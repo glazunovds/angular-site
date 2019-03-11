@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  .nav-link {
+    padding: 3px 10px;
+  }
+  .nav-link:hover {
+    background: #343a40 !important;
+    color: white !important;
+    cursor: pointer !important;
+  }
+}
+
