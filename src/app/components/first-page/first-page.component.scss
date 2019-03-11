@@ -1,0 +1,25 @@
+h2 {
+  line-height: 45px;
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.subtitle {
+  background: #f4f4f4;
+  line-height: 100px;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 385px;
+  height: 498px;
+  .item-bottom {
+    padding: 10px;
+  }
+}
