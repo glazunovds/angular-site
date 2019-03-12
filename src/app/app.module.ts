@@ -12,6 +12,7 @@ import { SecondPageComponent } from './components/second-page/second-page.compon
 import { FirstPageComponent } from './components/first-page/first-page.component';
 import { ThirdPageComponent } from './components/third-page/third-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, MatIconModule
+    MatButtonModule, MatCheckboxModule, MatIconModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
