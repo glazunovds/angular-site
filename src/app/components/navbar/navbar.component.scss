@@ -1,6 +1,8 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  background: white;
+  width: 100%;
   .nav-link {
     padding: 3px 10px;
   }
@@ -9,5 +11,11 @@
     color: white !important;
     cursor: pointer !important;
   }
+}
+
+.selected-route {
+  background: #343a40 !important;
+  color: white !important;
+  cursor: pointer !important;
 }
 

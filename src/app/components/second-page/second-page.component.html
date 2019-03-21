@@ -1,3 +1,18 @@
-<p>
-  second-page works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div>
+      <div class="page-title col-md-8 offset-md-2 stretch" style="font-size: 38px;">{{data.title}}</div>
+      <div class="divider col-md-8 offset-md-2"></div>
+      <div class="page-description col-md-8 offset-md-2">{{data.description}}</div>
+      <div class="items-wrapper col-md-8 offset-md-2">
+        <div *ngFor="let repair of data.repairArray" class="item">
+          <img src="{{repair.image}}">
+          <div class="repair-block">
+            <div class="repair-title">{{repair.title}}</div>
+            <div class="repair-description">{{repair.description}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

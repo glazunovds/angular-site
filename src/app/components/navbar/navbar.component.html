@@ -1,10 +1,10 @@
 <div class="navbar nav">
-  <a class="navbar-brand" routerLink="/">Сервисный центр "Центр Сервис"</a>
-  <a class="nav-link" routerLink="/">Главная</a>
-  <a class="nav-link" routerLink="first/">О сервисе</a>
-  <a class="nav-link" routerLink="second/">Ремонт мелкой бытовой техники</a>
-  <a class="nav-link" routerLink="third/">Ремонт электроники и ТВ</a>
-  <a class="nav-link">Ремонт отопительного и климатического оборудования</a>
-  <a class="nav-link">Ремонт крупной бытовой техники</a>
+  <a class="navbar-brand stretch" routerLink="/">Сервисный центр "Центр Сервис"</a>
+  <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="/">Главная</a>
+  <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="about/">О сервисе</a>
+  <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/small-repair">Ремонт мелкой бытовой техники</a>
+  <a class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/electronic-repair">Ремонт электроники и ТВ</a>
+  <a class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/climatic-repair">Ремонт отопительного и климатического оборудования</a>
+  <a class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/large-repair">Ремонт крупной бытовой техники</a>
   <a class="nav-link"><mat-icon>search</mat-icon></a>
 </div>

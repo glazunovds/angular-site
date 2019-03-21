@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
+import {DETAILS_PAGE} from '@appComponents/site-data';
+import {AppService} from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +9,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  constructor(private router: Router,  public service: AppService) {
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((res) => {
+      if (res instanceof NavigationEnd) {
+        this.service.$currentRoute.next(res);
+      }
+    })
+  }
 }

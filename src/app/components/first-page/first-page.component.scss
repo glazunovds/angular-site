@@ -9,19 +9,44 @@ h2 {
 .subtitle {
   background: #f4f4f4;
   line-height: 100px;
+  text-decoration: underline;
+  font-size: 22px;
 }
 
 .items {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .item {
   width: 385px;
-  height: 498px;
-  .item-bottom {
+  height: 560px;
+  border: none;
+  /*.item-bottom {
     padding: 10px;
-  }
+  }*/
 }
 
+.category {
+  //padding: 0 400px;
+}
 
+/*.slick-slider {
+  width: 100%;
+}*/
+
+.buy-button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: rgba(253,216,53,1);
+  color: rgba(61,61,61,1);
+  border: 1px solid rgba(61,61,61,1);
+  font-weight: 400;
+}
+
+.card-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+}
