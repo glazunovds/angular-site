@@ -1,22 +1,29 @@
 <div class="container-fluid">
   <h2>СЕРВИСНЫЙ ЦЕНТР "ЦЕНТР СЕРВИС" В ЗАПОРОЖЬЕ</h2>
-  <div class="category" *ngFor="let category of page">
-    <div class="subtitle">
-      <div class="col-md-8 offset-md-2"><a [routerLink]="['/first']">{{category.name}}</a></div>
-    </div>
-    <div class="items row">
-      <ngx-slick class="carousel col-md-8" #slickModal="slick-modal" [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let item of category.items; let i = index;" class="item card">
-          <div class="item-top card-img-top">
-            <img src="{{item.image}}">
+  <mat-accordion>
+    <div class="category" *ngFor="let category of page; let i = index;">
+      <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)" hideToggle>
+        <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'100px'">
+          <div class="subtitle">
+            <div class="col-md-8 offset-md-2"><a [routerLink]="[category.route]">{{category.name}}</a></div>
           </div>
-          <div class="item-bottom card-body">
-            <div class="item-title card-title">{{item.name}}</div>
-            <div class="item-description card-text">{{item.description}}</div>
-            <button class="buy-button" mat-button [routerLink]="['/product-details', item.route]">Узнать цену</button>
-          </div>
+        </mat-expansion-panel-header>
+        <div class="items row">
+          <ngx-slick class="carousel col-md-8" #slickModal="slick-modal" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let item of category.items; let i = index;" class="item card">
+              <div class="item-top card-img-top">
+                <img src="{{item.image}}" alt="{{item.image}}">
+              </div>
+              <div class="item-bottom card-body">
+                <div class="item-title card-title">{{item.name}}</div>
+                <div class="item-description card-text">{{item.description}}</div>
+                <button class="buy-button" mat-button [routerLink]="['/product-details', item.route]">Узнать цену
+                </button>
+              </div>
+            </div>
+          </ngx-slick>
         </div>
-      </ngx-slick>
+      </mat-expansion-panel>
     </div>
-  </div>
+  </mat-accordion>
 </div>

@@ -3,6 +3,12 @@
   z-index: 1;
   background: white;
   width: 100%;
+  .nav-link-wrapper a {
+    max-width: 314px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .nav-link {
     padding: 3px 10px;
   }

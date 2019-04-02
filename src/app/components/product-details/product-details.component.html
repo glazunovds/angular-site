@@ -28,7 +28,7 @@
       <div class="separator"><div class="col-md-8 offset-md-2 stretch">{{data.reviewsTitle}}</div></div>
       <div class="reviews-wrapper col-md-8 offset-md-3">
         <div *ngFor="let review of data.reviewsArray; let i = index;" class="review-item">
-          <div class="review-image"><img src="{{review.image}}"></div>
+          <div class="review-image"><img src="{{review.image}}" alt="{{review.image}}"></div>
           <div class="review-info">
             <div class="review-name">{{review.name}}</div>
             <div class="review-comment">{{review.comment}}</div>

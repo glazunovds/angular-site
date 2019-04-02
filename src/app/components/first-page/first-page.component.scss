@@ -9,19 +9,27 @@ h2 {
 .subtitle {
   background: #f4f4f4;
   line-height: 100px;
-  text-decoration: underline;
   font-size: 22px;
+  width: 100%;
+
+  a {
+    background-image: linear-gradient(black, black), linear-gradient(#f4f4f4, #f4f4f4);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .3s ease-out;
+  }
 }
 
 .items {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 0;
 }
 
 .item {
-  width: 385px;
-  height: 560px;
+  //width: 385px;
+  height: 100%;
   border: none;
   /*.item-bottom {
     padding: 10px;
@@ -30,6 +38,7 @@ h2 {
 
 .category {
   //padding: 0 400px;
+  padding-bottom: 15px;
 }
 
 /*.slick-slider {
@@ -39,9 +48,9 @@ h2 {
 .buy-button {
   margin-top: 10px;
   width: 100%;
-  background-color: rgba(253,216,53,1);
-  color: rgba(61,61,61,1);
-  border: 1px solid rgba(61,61,61,1);
+  background-color: rgba(253, 216, 53, 1);
+  color: rgba(61, 61, 61, 1);
+  border: 1px solid rgba(61, 61, 61, 1);
   font-weight: 400;
 }
 
@@ -49,4 +58,25 @@ h2 {
   font-weight: bold;
   text-align: center;
   font-size: 18px;
+}
+
+.mat-expansion-panel-header {
+  height: 100% !important;
+  padding: 0;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 0;
+}
+
+.mat-expansion-panel-header:hover {
+  .subtitle {
+    background: #d4d4d4;
+    a {
+      background-image: linear-gradient(black, black), linear-gradient(#d4d4d4, #d4d4d4);
+    }
+    a:hover {
+      background-size: 100% 2px, auto;
+    }
+  }
 }

@@ -1,10 +1,22 @@
 <div class="navbar nav">
   <a class="navbar-brand stretch" routerLink="/">Сервисный центр "Центр Сервис"</a>
-  <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="/">Главная</a>
-  <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="about/">О сервисе</a>
-  <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/small-repair">Ремонт мелкой бытовой техники</a>
-  <a class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/electronic-repair">Ремонт электроники и ТВ</a>
-  <a class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/climatic-repair">Ремонт отопительного и климатического оборудования</a>
-  <a class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/large-repair">Ремонт крупной бытовой техники</a>
-  <a class="nav-link"><mat-icon>search</mat-icon></a>
+  <div class="nav-link-wrapper">
+    <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="/">Главная</a>
+  </div>
+  <div class="nav-link-wrapper">
+    <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="about/">О сервисе</a>
+  </div>
+  <div class="nav-link-wrapper">
+    <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/small-repair" [matTooltip]="'Ремонт мелкой бытовой техники'">Ремонт мелкой бытовой техники</a>
+  </div>
+  <div class="nav-link-wrapper"><a class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/electronic-repair" [matTooltip]="'Ремонт электроники и ТВ'">Ремонт электроники и ТВ</a>
+  </div>
+  <div class="nav-link-wrapper"><a
+    class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+    routerLink="repair/climatic-repair" [matTooltip]="'Ремонт отопительного и климатического оборудования'">Ремонт отопительного и климатического оборудования</a></div>
+  <div class="nav-link-wrapper"><a class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+                                   routerLink="repair/large-repair" [matTooltip]="'Ремонт крупной бытовой техники'">Ремонт крупной бытовой техники</a></div>
+  <a class="nav-link">
+    <mat-icon>search</mat-icon>
+  </a>
 </div>

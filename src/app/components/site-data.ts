@@ -1,8 +1,9 @@
 import {MainPage, MainPageItem} from '@appComponents/interfaces';
 
-export const MAIN_PAGE: ({ name: string; items: ({ image: string; name: string; description: string, route: string })[] })[] = [
+export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string; name: string; description: string, route: string })[] })[] = [
   {
-    name: 'Ремонт мелкой бытовой техники в Запорожье',
+    name: 'Ремонт мелкой бытовой техники',
+    route: '/repair/small-repair',
     items: [
       {
         image: 'assets/1.png',
@@ -43,7 +44,8 @@ export const MAIN_PAGE: ({ name: string; items: ({ image: string; name: string; 
     ]
   },
   {
-    name: 'Ремонт мелкой бытовой техники в Запорожье',
+    name: 'Ремонт крупной бытовой техники',
+    route: '/repair/large-repair',
     items: [
       {
         image: 'assets/1.png',
@@ -85,6 +87,7 @@ export const MAIN_PAGE: ({ name: string; items: ({ image: string; name: string; 
   },
   {
     name: 'Ремонт электроники и ТВ',
+    route: '/repair/electronic-repair',
     items: [
       {
         image: 'assets/1.png',
@@ -126,6 +129,7 @@ export const MAIN_PAGE: ({ name: string; items: ({ image: string; name: string; 
   },
   {
     name: 'Ремонт отопительного и климатического оборудования',
+    route: '/repair/climatic-repair',
     items: [
       {
         image: 'assets/1.png',
