@@ -28,9 +28,6 @@ export class FirstPageComponent implements OnInit {
     'autoplaySpeed': 10000,
     'pause-on-hover': true,
     'dots': true,
-    'setPosition': function (e) {
-
-    }
   };
   public step = 0;
 

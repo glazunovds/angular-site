@@ -11,17 +11,24 @@
   }
   .nav-link {
     padding: 3px 10px;
+    background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(white, white);
+    background-size: 0 4px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .3s ease-out;
   }
   .nav-link:hover {
-    background: #343a40 !important;
-    color: white !important;
+    //background: #343a40 !important;
+    //color: white !important;
     cursor: pointer !important;
+    background-size: 100% 4px, auto;
   }
 }
 
 .selected-route {
-  background: #343a40 !important;
-  color: white !important;
+  //background: #343a40 !important;
+  //color: white !important;
   cursor: pointer !important;
+  background-size: 100% 4px, auto !important;
 }
 
