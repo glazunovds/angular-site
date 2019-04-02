@@ -567,6 +567,10 @@ MIT
 
 @angular/material/button
 
+@angular/material/expansion
+
+@angular/material/tooltip
+
 @ng-bootstrap/ng-bootstrap
 MIT
 The MIT License (MIT)
