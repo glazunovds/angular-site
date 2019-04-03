@@ -33,6 +33,7 @@
     "@ngrx/router-store": "^7.0.0",
     "@ngrx/store": "^7.0.0",
     "@ngrx/store-devtools": "^7.0.0",
+    "@types/jquery": "^3.3.29",
     "angular-in-memory-web-api": "~0.7.0",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.6.1",

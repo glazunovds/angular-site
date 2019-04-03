@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, NgZone, OnInit} from '@angular/core';
 import {MAIN_PAGE} from '@appComponents/site-data';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 const EXPANSION_PANEL_ANIMATION_TIMING = '225ms cubic-bezier(0.4,0.0,0.2,1)';
+declare const $: any;
 
 const expansion = trigger('expansion', [
   state('collapsed, void', style({height: '0px', visibility: 'hidden'})),
@@ -17,7 +18,7 @@ const expansion = trigger('expansion', [
   styleUrls: ['./first-page.component.scss'],
   animations: [expansion]
 })
-export class FirstPageComponent implements OnInit {
+export class FirstPageComponent implements OnInit, AfterViewInit {
   page = MAIN_PAGE;
   slideConfig = {
     'slidesToShow': 3,
@@ -28,25 +29,78 @@ export class FirstPageComponent implements OnInit {
     'autoplaySpeed': 10000,
     'pause-on-hover': true,
     'dots': true,
+    responsive: [
+      {
+        breakpoint: 968,
+        settings: {
+          'slidesToShow': 3,
+          'slidesToScroll': 1,
+          'infinite': true,
+          'arrows': false,
+          'autoplay': true,
+          'autoplaySpeed': 10000,
+          'pause-on-hover': true,
+          'dots': true,
+        }
+      },
+      {
+        breakpoint: 850,
+        settings: {
+          'slidesToShow': 2,
+          'slidesToScroll': 1,
+          'infinite': true,
+          'arrows': false,
+          'autoplay': true,
+          'autoplaySpeed': 10000,
+          'pause-on-hover': true,
+          'dots': true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          'slidesToShow': 1,
+          'slidesToScroll': 1,
+          'infinite': true,
+          'arrows': false,
+          'autoplay': true,
+          'autoplaySpeed': 10000,
+          'pause-on-hover': true,
+          'dots': true,
+        }
+      }
+    ]
   };
   public step = 0;
 
-  constructor() {
+  constructor(public zone: NgZone) {
 
   }
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit(): void {
+    this.zone.runOutsideAngular(() => {
+      $('.carousel').slick(this.slideConfig);
+    });
+    window.dispatchEvent(new Event('resize'));
   }
 
   setStep(index: number) {
     this.step = index;
   }
 
-  nextStep() {
-    this.step++;
-  }
+  public onResize(): void {
+    const titles: Array<Element> = Array.from(document.getElementsByClassName('card-title'));
+    const texts: Array<Element> = Array.from(document.getElementsByClassName('card-text'));
+    let maxTitleHeight = 0;
+    let maxTextHeight = 0;
+    titles.forEach((item: HTMLElement) => maxTitleHeight = item.offsetHeight > maxTitleHeight ? item.offsetHeight : maxTitleHeight);
+    titles.forEach((item: HTMLElement) => item.style.height = maxTitleHeight + 'px');
 
-  prevStep() {
-    this.step--;
+    texts.forEach((item: HTMLElement) => maxTextHeight = item.offsetHeight > maxTextHeight ? item.offsetHeight : maxTextHeight);
+    texts.forEach((item: HTMLElement) => item.style.height = maxTextHeight + 'px');
   }
 }

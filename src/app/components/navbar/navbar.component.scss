@@ -4,25 +4,25 @@
   background: white;
   width: 100%;
   .nav-link-wrapper a {
-    max-width: 314px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    //max-width: 314px;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+    //white-space: nowrap;
   }
-  .nav-link {
-    padding: 3px 10px;
-    background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(white, white);
-    background-size: 0 4px, auto;
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    transition: all .3s ease-out;
-  }
-  .nav-link:hover {
-    //background: #343a40 !important;
-    //color: white !important;
-    cursor: pointer !important;
-    background-size: 100% 4px, auto;
-  }
+}
+.nav-link {
+  padding: 3px 10px;
+  background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(white, white);
+  background-size: 0 4px, auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: all .3s ease-out;
+}
+.nav-link:hover {
+  //background: #343a40 !important;
+  //color: white !important;
+  cursor: pointer !important;
+  background-size: 100% 4px, auto;
 }
 
 .selected-route {
@@ -32,3 +32,100 @@
   background-size: 100% 4px, auto !important;
 }
 
+.hamburger {
+  display: none;
+}
+
+.menu-item-hide {
+  display: block;
+}
+
+.hidden-md {
+  display: none;
+}
+
+.hidden-menu {
+  visibility: hidden;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+  .hidden-md {
+    display: block;
+  }
+  .menu-item-hide {
+    display: none;
+  }
+  .navbar {
+    justify-content: normal;
+  }
+}
+
+@media (min-width: 600px) {
+  .side-menu {
+    display: none;
+  }
+}
+
+.side-menu {
+  position: fixed;
+  z-index: 13;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .nav-link-wrapper a {
+    overflow: auto;
+  }
+}
+
+.overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.6);
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+  opacity: 1;
+}
+
+.overlay-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mobile-menu-items {
+  z-index: 3;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  transform: none;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+}
+
+.mobile-menu-items-hidden {
+  z-index: 3;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  transform: translate3d(-100%,0,0);
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+}
+
+.nav-subitems {
+  display: inline-flex;
+}

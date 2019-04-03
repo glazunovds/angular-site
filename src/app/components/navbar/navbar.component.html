@@ -1,22 +1,75 @@
-<div class="navbar nav">
-  <a class="navbar-brand stretch" routerLink="/">Сервисный центр "Центр Сервис"</a>
-  <div class="nav-link-wrapper">
-    <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="/">Главная</a>
+<div class="navbar nav" (window:resize)="onResize()">
+  <div class="hamburger">
+    <button mat-icon-button (click)="toggleNavBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
   </div>
-  <div class="nav-link-wrapper">
-    <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="about/">О сервисе</a>
+  <a class="navbar-brand stretch " routerLink="/">Сервисный центр "Центр Сервис"</a>
+  <div class="nav-subitems">
+    <div class="nav-link-wrapper menu-item-hide">
+      <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" *ngIf="menuItemsAvailable > 0" routerLink="/">Главная</a>
+    </div>
+    <div class="nav-link-wrapper menu-item-hide">
+      <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" *ngIf="menuItemsAvailable > 1" routerLink="about/">О сервисе</a>
+    </div>
+    <div class="nav-link-wrapper menu-item-hide">
+      <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+         routerLink="repair/small-repair" *ngIf="menuItemsAvailable > 2">Ремонт мелкой бытовой техники</a>
+    </div>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/electronic-repair" *ngIf="menuItemsAvailable > 3">Ремонт электроники и ТВ</a>
+    </div>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/climatic-repair" *ngIf="menuItemsAvailable > 4">Ремонт
+      отопительного и климатического оборудования</a></div>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/large-repair" *ngIf="menuItemsAvailable > 5">Ремонт крупной бытовой техники</a>
+    </div>
+    <mat-menu #appMenu="matMenu" class="menu-item-hide">
+      <button mat-menu-item *ngFor="let item of subMenuItems" routerLink="{{item.route}}">{{item.name}}</button>
+    </mat-menu>
+    <button class="menu-item-hide" mat-icon-button [matMenuTriggerFor]="appMenu" *ngIf="subMenuItems.length > 0">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <a class="nav-link menu-item-hide">
+      <mat-icon>search</mat-icon>
+    </a>
   </div>
-  <div class="nav-link-wrapper">
-    <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/small-repair" [matTooltip]="'Ремонт мелкой бытовой техники'">Ремонт мелкой бытовой техники</a>
-  </div>
-  <div class="nav-link-wrapper"><a class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="repair/electronic-repair" [matTooltip]="'Ремонт электроники и ТВ'">Ремонт электроники и ТВ</a>
-  </div>
-  <div class="nav-link-wrapper"><a
-    class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-    routerLink="repair/climatic-repair" [matTooltip]="'Ремонт отопительного и климатического оборудования'">Ремонт отопительного и климатического оборудования</a></div>
-  <div class="nav-link-wrapper"><a class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-                                   routerLink="repair/large-repair" [matTooltip]="'Ремонт крупной бытовой техники'">Ремонт крупной бытовой техники</a></div>
-  <a class="nav-link">
-    <mat-icon>search</mat-icon>
-  </a>
+
 </div>
+
+<div class="{{opened ? 'side-menu' : 'side-menu hidden-menu'}}">
+  <div class="{{opened ? 'overlay' : 'overlay overlay-hidden'}}" (click)="disableNavBar()"></div>
+  <div class="{{opened ? 'mobile-menu-items' : 'mobile-menu-items-hidden'}}">
+    <div class="nav-link-wrapper">
+      <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="/" (click)="disableNavBar()">Главная</a>
+    </div>
+    <div class="nav-link-wrapper">
+      <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" routerLink="about/"
+         (click)="disableNavBar()">О сервисе</a>
+    </div>
+    <div class="nav-link-wrapper">
+      <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+         routerLink="repair/small-repair" (click)="disableNavBar()">Ремонт мелкой бытовой техники</a>
+    </div>
+    <div class="nav-link-wrapper"><a
+      class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/electronic-repair" (click)="disableNavBar()">Ремонт электроники и ТВ</a>
+    </div>
+    <div class="nav-link-wrapper"><a
+      class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/climatic-repair" (click)="disableNavBar()">Ремонт отопительного и климатического
+      оборудования</a></div>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/large-repair" (click)="disableNavBar()">Ремонт крупной бытовой техники</a></div>
+    <a class="nav-link">
+      <mat-icon>search</mat-icon>
+    </a>
+  </div>
+
+</div>
+

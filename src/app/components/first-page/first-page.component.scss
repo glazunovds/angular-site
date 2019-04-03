@@ -73,11 +73,40 @@ h2 {
 .mat-expansion-panel-header:hover {
   .subtitle {
     background: #d4d4d4;
+
     a {
       background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(#d4d4d4, #d4d4d4);
     }
+
     a:hover {
       background-size: 100% 2px, auto;
     }
+  }
+}
+
+@media (max-width: 968px) {
+  //.card-title {
+  //  font-size: 15px;
+  //}
+}
+
+@media (max-width: 980px) {
+  .subtitle {
+    line-height: 80px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 542px) {
+  .subtitle {
+    line-height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 490px) {
+  .subtitle {
+    line-height: 50px;
+    font-size: 11px;
   }
 }

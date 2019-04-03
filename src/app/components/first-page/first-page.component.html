@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" (window:resize)="onResize()">
   <h2>Сервисный центр "Центр Сервис" в Запорожье</h2>
   <mat-accordion>
     <div class="category" *ngFor="let category of page; let i = index;">
@@ -9,8 +9,8 @@
           </div>
         </mat-expansion-panel-header>
         <div class="items row">
-          <ngx-slick class="carousel col-md-8" #slickModal="slick-modal" [config]="slideConfig">
-            <div ngxSlickItem *ngFor="let item of category.items; let i = index;" class="item card">
+          <div class="carousel col-md-8">
+            <div *ngFor="let item of category.items; let i = index;" class="item card">
               <div class="item-top card-img-top">
                 <img src="{{item.image}}" alt="{{item.image}}">
               </div>
@@ -21,7 +21,7 @@
                 </button>
               </div>
             </div>
-          </ngx-slick>
+          </div>
         </div>
       </mat-expansion-panel>
     </div>
