@@ -565,6 +565,8 @@ MIT
 
 @angular/material/tooltip
 
+@angular/material/menu
+
 @angular/material/icon
 
 @angular/forms
