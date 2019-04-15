@@ -49,7 +49,7 @@ h2 {
 .buy-button {
   margin-top: 10px;
   width: 100%;
-  background-color: rgba(253, 216, 53, 1);
+  background-color: rgba(245, 180, 18, 1);
   color: rgba(61, 61, 61, 1);
   border: 1px solid rgba(61, 61, 61, 1);
   font-weight: 400;
@@ -82,6 +82,10 @@ h2 {
       background-size: 100% 2px, auto;
     }
   }
+}
+
+.items {
+  padding-top: 20px;
 }
 
 @media (max-width: 968px) {

@@ -4,31 +4,39 @@
       <div class="page-title col-md-8 offset-md-2 stretch">{{data.title}}</div>
       <div class="divider col-md-8 offset-md-2"></div>
       <div class="page-description col-md-8 offset-md-2">{{data.description}}</div>
-    <div class="separator"><div class="col-md-8 offset-md-2 stretch">{{data.costTitle}}</div></div>
+      <div class="separator">
+        <div class="col-md-8 offset-md-2 stretch">{{data.costTitle}}</div>
+      </div>
       <div class="cost-wrapper col-md-8 offset-md-2">
         <div *ngFor="let cost of data.costArray" class="cost-item">
           <div class="cost-title">{{cost.name}}</div>
           <button class="site-button">{{cost.value}}</button>
         </div>
       </div>
-      <div class="separator"><div class="col-md-8 offset-md-2 stretch">{{data.problemsTitle}}</div></div>
+      <div class="separator">
+        <div class="col-md-8 offset-md-2 stretch">{{data.problemsTitle}}</div>
+      </div>
       <div class="problems-wrapper col-md-8 offset-md-2">
         <div *ngFor="let problem of data.problemsArray; let i = index" class="problem">
           <div class="problem-title">{{i + 1}}. {{problem.title}}</div>
           <div class="problem-description">{{problem.description}}</div>
         </div>
       </div>
-      <div class="separator"><div class="col-md-8 offset-md-2 stretch">{{data.faqTitle}}</div></div>
+      <div class="separator">
+        <div class="col-md-8 offset-md-2 stretch">{{data.faqTitle}}</div>
+      </div>
       <div class="faq-wrapper col-md-8 offset-md-2">
         <div *ngFor="let faq of data.faqArray" class="faq-item">
           <div class="faq-title">{{faq.title}}</div>
           <div class="faq-description">{{faq.description}}</div>
         </div>
       </div>
-      <div class="separator"><div class="col-md-8 offset-md-2 stretch">{{data.reviewsTitle}}</div></div>
+      <div class="separator">
+        <div class="col-md-8 offset-md-2 stretch">{{data.reviewsTitle}}</div>
+      </div>
       <div class="reviews-wrapper col-md-8 offset-md-3">
         <div *ngFor="let review of data.reviewsArray; let i = index;" class="review-item">
-          <div class="review-image"><img src="{{review.image}}" alt="{{review.image}}"></div>
+          <div class="review-image"><img alt="{{review.image}}" src="{{review.image}}"></div>
           <div class="review-info">
             <div class="review-name">{{review.name}}</div>
             <div class="review-comment">{{review.comment}}</div>

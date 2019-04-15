@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {Repair, REPAIR_PAGE} from '@appComponents/site-data';
 import {ActivatedRoute} from '@angular/router';
 
@@ -7,7 +7,7 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './second-page.component.html',
   styleUrls: ['./second-page.component.scss']
 })
-export class SecondPageComponent implements OnInit {
+export class SecondPageComponent implements OnInit, OnDestroy {
   id: string;
   public data: Repair;
   private sub: any;
@@ -20,11 +20,11 @@ export class SecondPageComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
 
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
 

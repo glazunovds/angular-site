@@ -7,7 +7,6 @@ import {AppService} from '../../app.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
-  private sub: any;
   public route: any = '';
   public opened = false;
   public menuItemsAvailable = 0;
@@ -20,7 +19,13 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     {route: '/repair/climatic-repair', name: 'Ремонт отопительного и климатического оборудования'},
     {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
   ];
-  public subMenuItems = [];
+  public subMenuItems = [
+    {route: '/repair/small-repair', name: 'Ремонт мелкой бытовой техники'},
+    {route: '/repair/electronic-repair', name: 'Ремонт электроники и ТВ'},
+    {route: '/repair/climatic-repair', name: 'Ремонт отопительного и климатического оборудования'},
+    {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
+  ];
+  private sub: any;
 
   constructor(public service: AppService) {
   }
@@ -44,7 +49,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   onResize(): void {
-    const availableWidth = document.getElementsByClassName('navbar')[0].getBoundingClientRect().width - document.getElementsByClassName('navbar-brand')[0].getBoundingClientRect().width;
+    /*const availableWidth = document.getElementsByClassName('navbar')[0].getBoundingClientRect().width - document.getElementsByClassName('navbar-brand')[0].getBoundingClientRect().width;
     let availableSymbols = (availableWidth - 120) / 13;
     let itemsCount = 0;
     const menu = ['Главная', 'О сервисе', 'Ремонт мелкой бытовой техники', 'Ремонт электроники и ТВ', 'Ремонт отопительного и климатического оборудования', 'Ремонт крупной бытовой техники'];
@@ -56,7 +61,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     });
     this.menuItemsAvailable = itemsCount;
     this.subMenuItems = this.navItems.filter((item, index) => index >= itemsCount);
-    this.windowWidth = window.outerWidth;
+    this.windowWidth = window.outerWidth;*/
   }
 
 }

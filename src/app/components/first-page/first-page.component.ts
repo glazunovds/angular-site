@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, NgZone, OnInit} from '@angular/core';
+import {AfterViewInit, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {MAIN_PAGE} from '@appComponents/site-data';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
@@ -18,7 +18,7 @@ const expansion = trigger('expansion', [
   styleUrls: ['./first-page.component.scss'],
   animations: [expansion]
 })
-export class FirstPageComponent implements OnInit, AfterViewInit {
+export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
   page = MAIN_PAGE;
   slideConfig = {
     'slidesToShow': 3,
@@ -72,23 +72,39 @@ export class FirstPageComponent implements OnInit, AfterViewInit {
     ]
   };
   public step = 0;
+  public listener: any;
 
   constructor(public zone: NgZone) {
 
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
 
   }
 
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     this.zone.runOutsideAngular(() => {
       $('.carousel').slick(this.slideConfig);
     });
+    setTimeout(() => {
+      $('.parallax').parallax({imageSrc: 'assets/background1.jpg', overScrollFix: true});
+    }, 20);
+    $(window).trigger('resize').trigger('scroll');
     window.dispatchEvent(new Event('resize'));
+    this.listener = setInterval(() => {
+      this.onResize();
+    }, 5000);
   }
 
-  setStep(index: number) {
+  public ngOnDestroy(): void {
+    $('.parallax-mirror').remove();
+    if (this.listener) {
+      clearInterval(this.listener);
+      this.listener = null;
+    }
+  }
+
+  public setStep(index: number): void {
     this.step = index;
   }
 

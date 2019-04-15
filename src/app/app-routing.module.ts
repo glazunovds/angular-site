@@ -6,6 +6,7 @@ import {FirstPageComponent} from '@appComponents/first-page/first-page.component
 import {ThirdPageComponent} from '@appComponents/third-page/third-page.component';
 import {ProductDetailsComponent} from '@appComponents/product-details/product-details.component';
 import {AboutComponent} from '@appComponents/about/about.component';
+import {ContactsComponent} from '@appComponents/contacts/contacts.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent
   },
   {
     path: 'repair/:id',

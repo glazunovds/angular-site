@@ -1,12 +1,13 @@
-<div class="navbar nav" (window:resize)="onResize()">
+<div (window:resize)="onResize()" class="navbar nav">
   <div class="hamburger">
-    <button mat-icon-button (click)="toggleNavBar()">
+    <button (click)="toggleNavBar()" mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <a class="navbar-brand stretch " routerLink="/">Сервисный центр "Центр Сервис"</a>
+  <a class="navbar-brand stretch " routerLink="/"><img alt="navbar" class="navbar-logo" src="assets/logo.jpg"/>Сервисный
+    центр "Центр Сервис"</a>
   <div class="nav-subitems">
-    <div class="nav-link-wrapper menu-item-hide">
+    <!--<div class="nav-link-wrapper menu-item-hide">
       <a class="{{route === '/' ? 'nav-link selected-route' : 'nav-link'}}" *ngIf="menuItemsAvailable > 0" routerLink="/">Главная</a>
     </div>
     <div class="nav-link-wrapper menu-item-hide">
@@ -27,13 +28,23 @@
     <div class="nav-link-wrapper menu-item-hide"><a
       class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
       routerLink="repair/large-repair" *ngIf="menuItemsAvailable > 5">Ремонт крупной бытовой техники</a>
-    </div>
+    </div>-->
     <mat-menu #appMenu="matMenu" class="menu-item-hide">
-      <button mat-menu-item *ngFor="let item of subMenuItems" routerLink="{{item.route}}">{{item.name}}</button>
+      <button *ngFor="let item of subMenuItems" mat-menu-item routerLink="{{item.route}}">{{item.name}}</button>
     </mat-menu>
-    <button class="menu-item-hide" mat-icon-button [matMenuTriggerFor]="appMenu" *ngIf="subMenuItems.length > 0">
-      <mat-icon>more_vert</mat-icon>
+    <button *ngIf="subMenuItems.length > 0" [matMenuTriggerFor]="appMenu" class="nav-link-wrapper menu-item-hide menu-button"
+            mat-icon-button>
+      Услуги
+      <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === 'about/' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="about/">О сервисе</a>
+    </div>
+    <div class="nav-link-wrapper menu-item-hide"><a
+      class="{{route === 'contacts/' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="contacts/">Контакты</a>
+    </div>
     <a class="nav-link menu-item-hide">
       <mat-icon>search</mat-icon>
     </a>

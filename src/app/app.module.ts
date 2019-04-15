@@ -25,6 +25,7 @@ import {AppService} from './app.service';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {RouteReuseStrategy} from '@angular/router';
 import {CustomReuseStrategy} from '@appComponents/custom-router-strategy';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 
 @NgModule({
@@ -44,11 +45,12 @@ import {CustomReuseStrategy} from '@appComponents/custom-router-strategy';
     NavbarComponent,
     ProductDetailsComponent,
     AboutComponent,
+    ContactsComponent,
   ],
-  providers: [AppService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {
+  providers: [AppService, {provide: LocationStrategy, useClass: HashLocationStrategy}, /*{
     provide: RouteReuseStrategy,
     useClass: CustomReuseStrategy
-  }],
+  }*/],
   bootstrap: [AppComponent]
 })
 export class AppModule {

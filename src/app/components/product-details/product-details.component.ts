@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Details, DETAILS_PAGE} from '@appComponents/site-data';
 
@@ -7,7 +7,7 @@ import {Details, DETAILS_PAGE} from '@appComponents/site-data';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.scss']
 })
-export class ProductDetailsComponent implements OnInit {
+export class ProductDetailsComponent implements OnInit, OnDestroy {
   id: string;
   public data: Details;
   private sub: any;
@@ -16,14 +16,14 @@ export class ProductDetailsComponent implements OnInit {
               private cd: ChangeDetectorRef) {
   }
 
-  ngOnInit() {
+  public ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       this.data = DETAILS_PAGE.filter(item => item.route === this.id)[0];
     });
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
 
