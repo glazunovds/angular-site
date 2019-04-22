@@ -1,5 +1,6 @@
 .item {
   display: inline-flex;
+  padding-bottom: 30px;
 }
 
 .repair-title {
@@ -9,4 +10,20 @@
 
 .repair-block {
   padding: 50px 20px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+@media (max-width: 1200px) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .repair-title {
+    text-align: center;
+  }
 }

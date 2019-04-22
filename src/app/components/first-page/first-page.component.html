@@ -9,6 +9,7 @@
   <!--<h2>Сервисный центр "Центр Сервис" в Запорожье</h2>-->
   <mat-accordion>
     <div *ngFor="let category of page; let i = index;" class="category">
+      <section>
       <mat-expansion-panel (opened)="setStep(i)" [expanded]="step === i">
         <mat-expansion-panel-header [collapsedHeight]="'100px'" [expandedHeight]="'100px'">
           <div class="subtitle">
@@ -24,13 +25,14 @@
               <div class="item-bottom card-body">
                 <div class="item-title card-title">{{item.name}}</div>
                 <div class="item-description card-text">{{item.description}}</div>
-                <button [routerLink]="['/product-details', item.route]" class="buy-button" mat-button>Узнать цену
+                <button aria-label="Узнать цену" [routerLink]="['/product-details', item.route]" class="buy-button" mat-button>Узнать цену
                 </button>
               </div>
             </div>
           </div>
         </div>
       </mat-expansion-panel>
+      </section>
     </div>
   </mat-accordion>
 </div>
