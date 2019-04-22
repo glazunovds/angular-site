@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {ABOUT} from '@appComponents/site-data';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +7,10 @@ import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  public step = 0;
+
+  public page = ABOUT;
 
   constructor() {
   }
@@ -20,6 +25,10 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
     }, 20);
     // @ts-ignore
     $(window).trigger('resize').trigger('scroll');
+  }
+
+  public setStep(index: number): void {
+    this.step = index;
   }
 
   public ngOnDestroy(): void {

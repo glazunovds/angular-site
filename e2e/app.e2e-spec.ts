@@ -24,7 +24,7 @@ class Hero {
     };
   }
 
-  // Hero from hero list <li> element.
+  // Hero from hero list <li>-  element.
   static async fromLi(li: ElementFinder): Promise<Hero> {
       let stringsFromA = await li.all(by.css('a')).getText();
       let strings = stringsFromA[0].split(' ');
