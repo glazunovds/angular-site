@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
+import {InjectionToken, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -9,10 +9,10 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatCheckboxModule,
+  MatCheckboxModule, MatDialog, MatDialogModule,
   MatExpansionModule,
   MatFormFieldModule,
-  MatIconModule, MatMenuModule, MatSidenavModule, MatToolbarModule,
+  MatIconModule, MatInputModule, MatMenuModule, MatSidenavModule, MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
 import {SecondPageComponent} from './components/second-page/second-page.component';
@@ -26,6 +26,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {RouteReuseStrategy} from '@angular/router';
 import {CustomReuseStrategy} from '@appComponents/custom-router-strategy';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { ContactDialogComponent } from './components/contact-dialog/contact-dialog.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, MatIconModule, MatExpansionModule, MatFormFieldModule, MatTooltipModule, MatToolbarModule, MatSidenavModule, MatMenuModule
+    MatButtonModule, MatCheckboxModule, MatIconModule, MatExpansionModule, MatFormFieldModule, MatTooltipModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatInputModule,
+    MatDialogModule, ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -46,8 +48,12 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     ProductDetailsComponent,
     AboutComponent,
     ContactsComponent,
+    ContactDialogComponent,
   ],
-  providers: [AppService, {provide: LocationStrategy, useClass: HashLocationStrategy}, /*{
+  entryComponents: [
+    ContactDialogComponent
+  ],
+  providers: [AppService, MatDialog, {provide: LocationStrategy, useClass: HashLocationStrategy}, /*{
     provide: RouteReuseStrategy,
     useClass: CustomReuseStrategy
   }*/],

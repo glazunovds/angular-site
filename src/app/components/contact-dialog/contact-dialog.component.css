@@ -1,0 +1,12 @@
+button {
+  margin-top: 10px;
+  background-color: #f5b412;
+  color: #3d3d3d;
+  border: 1px solid #3d3d3d;
+  font-weight: 400;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+  padding-bottom: 14px;
+}

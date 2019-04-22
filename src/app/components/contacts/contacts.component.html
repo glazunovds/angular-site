@@ -1,3 +1,16 @@
 <div class="container-fluid wrapper">
   <div class="contact">Контакты</div>
+  <div class="contact-form" [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Как вас зовут?</mat-label>
+      <input matInput placeholder="Александр" [formControlName]="'name'">
+      <mat-error *ngIf="hasError('name', 'required')">Введите имя</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Ваш номер телефона:</mat-label>
+      <input matInput placeholder="077-777-77-77" [formControlName]="'number'">
+      <mat-error *ngIf="hasError('number', 'required')">Введите номер телефона</mat-error>
+    </mat-form-field>
+    <button mat-button type="button" (click)="sendData()">Отправить</button>
+  </div>
 </div>
