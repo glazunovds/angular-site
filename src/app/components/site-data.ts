@@ -203,7 +203,7 @@ export interface Repair {
   route: string;
   title: string;
   description: string;
-  repairArray: Array<{title: string; description: string; image: string;}>
+  repairArray: Array<{title: string; description: string; image: string; cost: string;}>
 }
 
 export const REPAIR_PAGE: Array<Repair> = [
@@ -215,22 +215,26 @@ export const REPAIR_PAGE: Array<Repair> = [
       {
         title: 'Ремонт фенов и электрических плоек',
         description: 'Ремонт фенов и электрических плоек Saturn, Scarlett, Bosch, Philips, Rowenta, таже обслуживание других электрических устройств в сервисе и на дому.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт швейных машин от 50 грн',
         description: 'Мы предлагаем качественный ремонт и настройку швейных машин в Запорожье на дому с гарантией и их сервисное обслуживание. И если вы ищите надежную мастерскую в Запорожье , где можно отремонтировать швейную машинку.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт кофемашин и кофеварок от 50 грн',
         description: 'Ремонт и сервисное обслуживание кофемашин и кофеварок Delonghi, Saeco, Philips, Gaggia, Solis, Bosch, Nivona, Siemens, Miele, Jura, AEG, La Cimbali и других.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт хлебопечек от 50 грн',
         description: 'Мы предлагаем вам квалифицированную диагностику и ремонт хлебопечек с гарантией на проведенные работы и запчасти. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       }
     ]
   },
@@ -242,22 +246,26 @@ export const REPAIR_PAGE: Array<Repair> = [
       {
         title: 'Ремонт компьютеров ',
         description: 'Высококлассный и оперативный ремонт компьютеров на дому',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт телевизоров',
         description: 'Высококлассный и оперативный ремонт телевизоров на дому',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт ноутбуков',
         description: 'Высококлассный и оперативный ремонт ноутбуков на дому',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт фотоаппаратов ',
         description: 'Высококлассный и оперативный ремонт фотоаппаратов на дому',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       }
     ]
   },
@@ -269,37 +277,44 @@ export const REPAIR_PAGE: Array<Repair> = [
       {
         title: 'Ремонт кондиционеров',
         description: 'Недорогая установка, профессиональный ремонт и сервисное техобслуживание холодильников в Запорожье и Запорожской области. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт Бойлеров',
         description: 'Профессиональный ремонт, сервисное техобслуживание и гарантийная установка бойлеров в Запорожье и Запорожской области. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт бойлеров',
         description: 'Профессиональный ремонт, сервисное техобслуживание и гарантийная установка бойлеров в Запорожье и Запорожской области. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт газовых колонок и котлов',
         description: 'Гарантийный ремонт газовой колонки, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт проточных водонагревателей',
         description: 'Гарантийный ремонт газовой колонки, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт электрических конвекторов',
         description: 'Гарантийный ремонт электрических конвекторов, тепловентиляторов и обогревателей, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт электрических котлов отопления',
         description: 'Гарантийный ремонт электрических конвекторов, тепловентиляторов и обогревателей, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       }
     ]
   },
@@ -311,42 +326,50 @@ export const REPAIR_PAGE: Array<Repair> = [
       {
         title: 'Ремонт электроплит',
         description: 'Профессиональный, гарантийный ремонт электроплит на дому в Запорожье',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт варочных поверхностей',
         description: 'Сервисный центр осуществляет ремонт варочной поверхности с выездом мастера на дом в Запорожье. Мы ремонтируем стеклокерамические варочные панели с механическим или сенсорным управлением, кухонные электрические плиты всех марок независимо от сложности поломки.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт посудомоечных машин',
         description: 'Предлагаем профессиональный, оперативный ремонт посудомоечных машин в городе Запорожье с выездом мастера на дом.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт стиральных машин',
         description: 'Сервисная служба "Центр Сервис" производит качественный, недорогой ремонт стиральных машин всех известных моделей и марок. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт индукционных плит',
         description: 'Ремонт индукционных плит с срочным выезом на дом. У нас работают квалифицированные мастера, которые выполняют ремонт с гарантией уже более 5 лет. ',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт сушильных машин',
         description: 'Заказать гарантийный ремонт сушильных машин с вызовом профессионального мастера на дом в Запорожье и Запорожской области.',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт водонагревателей',
         description: 'Сервисный центр в Запорожье по ремонту бойлеров: Thermex (Термекс), Whirlpool (Вирпул), Electrolux (Электролюкс), Bosh (Бош), AEG (АЕГ), Ariston (Аристон).',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
       {
         title: 'Ремонт кондиционеров',
         description: 'Ремонт кондиционеров Киев Samsung (Самсунг), Bosh (Бош), Electrolux (Электролюкс), LG (ЛДжи), Panasonic (Панасоник), Mitsubishi (Мицубиси).',
-        image: 'assets/logo.jpg'
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн'
       },
     ]
   },

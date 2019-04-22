@@ -4,7 +4,7 @@
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <a class="navbar-brand stretch " routerLink="/"><img alt="navbar" class="navbar-logo" src="assets/logo.jpg"/>Сервисный
+  <a class="navbar-brand stretch " (click)="scrollTop()" routerLink="/"><img alt="navbar" class="navbar-logo" src="assets/logo.jpg"/>Сервисный
     центр "Центр Сервис"</a>
   <div class="nav-subitems">
     <!--<div class="nav-link-wrapper menu-item-hide">
@@ -30,7 +30,7 @@
       routerLink="repair/large-repair" *ngIf="menuItemsAvailable > 5">Ремонт крупной бытовой техники</a>
     </div>-->
     <mat-menu #appMenu="matMenu" class="menu-item-hide">
-      <button type="button" *ngFor="let item of subMenuItems" mat-menu-item routerLink="{{item.route}}" attr.aria-label="{{item.name}}">{{item.name}}</button>
+      <button type="button" (click)="scrollTop()" *ngFor="let item of subMenuItems" mat-menu-item routerLink="{{item.route}}" attr.aria-label="{{item.name}}">{{item.name}}</button>
     </mat-menu>
     <button aria-label="Услуги" *ngIf="subMenuItems.length > 0" [matMenuTriggerFor]="appMenu" class="nav-link-wrapper menu-item-hide menu-button"
             mat-icon-button>
@@ -39,11 +39,11 @@
     </button>
     <div class="nav-link-wrapper menu-item-hide"><a
       class="{{route === 'about/' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="about/">О сервисе</a>
+      routerLink="about/" (click)="scrollTop()">О сервисе</a>
     </div>
     <div class="nav-link-wrapper menu-item-hide"><a
       class="{{route === 'contacts/' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="contacts/">Контакты</a>
+      routerLink="contacts/" (click)="scrollTop()">Контакты</a>
     </div>
     <!--<a class="nav-link menu-item-hide">
       <mat-icon>search</mat-icon>
@@ -68,10 +68,6 @@
       class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
       routerLink="repair/electronic-repair" (click)="disableNavBar()">Ремонт электроники и ТВ</a>
     </div>
-    <div class="nav-link-wrapper"><a
-      class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="repair/climatic-repair" (click)="disableNavBar()">Ремонт отопительного и климатического
-      оборудования</a></div>
     <div class="nav-link-wrapper"><a
       class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
       routerLink="repair/large-repair" (click)="disableNavBar()">Ремонт крупной бытовой техники</a></div>

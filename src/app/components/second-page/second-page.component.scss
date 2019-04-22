@@ -8,13 +8,21 @@
   padding-bottom: 20px;
 }
 
+.button-wrapper {
+  text-align: center;
+  padding-top: 15px;
+  button {
+    background-color: rgba(245, 180, 18, 1);
+  }
+}
+
 .repair-block {
   padding: 50px 20px;
 }
 
 img {
-  width: 250px;
-  height: 250px;
+  width: 371px;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {

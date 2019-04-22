@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AppService} from '../../app.service';
+declare const $: any;
 
 @Component({
   selector: 'app-navbar',
@@ -16,13 +17,11 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     {route: 'about/', name: 'О сервисе'},
     {route: '/repair/small-repair', name: 'Ремонт мелкой бытовой техники'},
     {route: '/repair/electronic-repair', name: 'Ремонт электроники и ТВ'},
-    {route: '/repair/climatic-repair', name: 'Ремонт отопительного и климатического оборудования'},
     {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
   ];
   public subMenuItems = [
     {route: '/repair/small-repair', name: 'Ремонт мелкой бытовой техники'},
     {route: '/repair/electronic-repair', name: 'Ремонт электроники и ТВ'},
-    {route: '/repair/climatic-repair', name: 'Ремонт отопительного и климатического оборудования'},
     {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
   ];
   private sub: any;
@@ -40,8 +39,13 @@ export class NavbarComponent implements OnInit, AfterViewInit {
     this.opened = !this.opened;
   }
 
+  scrollTop(): void {
+    $('html, body').stop().animate({scrollTop:0}, 500, 'swing');
+  }
+
   disableNavBar() {
     this.opened = false;
+    this.scrollTop();
   }
 
   ngAfterViewInit(): void {
