@@ -563,14 +563,18 @@ MIT
 
 @angular/material/expansion
 
+@angular/forms
+MIT
+
+@angular/material/form-field
+
 @angular/material/tooltip
+
+@angular/material/dialog
 
 @angular/material/menu
 
 @angular/material/icon
-
-@angular/forms
-MIT
 
 core-js
 MIT
