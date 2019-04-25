@@ -11,7 +11,7 @@
             <div class="repair-title">{{repair.title}}</div>
             <div class="repair-description">{{repair.description}}</div>
             <div class="button-wrapper">
-              <button class="site-button" type="button" attr.aria-label="{{repair.cost}}">{{repair.cost}}</button>
+              <button class="site-button" type="button" attr.aria-label="{{repair.cost}}" [routerLink]="repair.route">{{repair.cost}}</button>
             </div>
           </div>
         </div>
