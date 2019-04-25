@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {ABOUT} from '@appComponents/site-data';
+declare const $: any;
 
 @Component({
   selector: 'app-about',
@@ -34,5 +35,9 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   public ngOnDestroy(): void {
     // @ts-ignore
     $('.parallax-mirror').remove();
+  }
+
+  scrollTop(): void {
+    $('html, body').stop().animate({scrollTop:0}, 500, 'swing');
   }
 }

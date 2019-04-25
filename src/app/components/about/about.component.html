@@ -18,8 +18,8 @@
         <div >Каталог товаров, представленный на сайте компании, включает в себя следующие
           позиции:
         </div>
-        <div class="list-name">
-          Ремонт крупной бытовой техники
+        <div class="list-name sub-hover">
+          <a [routerLink]="'/repair/large-repair'" (click)="scrollTop()">Ремонт крупной бытовой техники</a>
         </div>
         <ul>
           <li>- Ремонт стиральных машин </li>
@@ -44,8 +44,8 @@
           <li>- Ремонт электроплит </li>
           <li>- Ремонт квадрокоптер</li>
         </ul>
-        <div class="list-name">
-          Ремонт мелкой бытовой техники
+        <div class="list-name sub-hover">
+          <a [routerLink]="'/repair/small-repair'" (click)="scrollTop()">Ремонт мелкой бытовой техники</a>
         </div>
         <ul>
           <li>- Ремонт мясорубки</li>
@@ -61,6 +61,15 @@
           <li>- Ремонт овощесушилки</li>
           <li>- Ремонт пылесоса </li>
           <li>- Ремонт утюга</li>
+        </ul>
+        <div class="list-name sub-hover">
+          <a [routerLink]="'/repair/electronic-repair'" (click)="scrollTop()">Ремонт электроники и тв</a>
+        </div>
+        <ul>
+          <li>- Ремонт ноутбуков</li>
+          <li>- Ремонт телефонов и планшетов</li>
+          <li>- Ремонт компьютеров</li>
+          <li>- Ремонт телевизоров</li>
         </ul>
       </div>
 

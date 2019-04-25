@@ -1,6 +1,7 @@
 .item {
   display: inline-flex;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 .repair-title {
@@ -17,11 +18,12 @@
 }
 
 .repair-block {
-  padding: 50px 20px;
+  padding: 0 20px 50px 20px;
+  width: 100%;
 }
 
 img {
-  width: 371px;
+  width: 250px;
   height: 100%;
 }
 

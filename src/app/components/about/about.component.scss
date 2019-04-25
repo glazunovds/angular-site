@@ -48,6 +48,31 @@ ul {
   }
 }
 
+.sub-hover {
+  a {
+    background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(white, white);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .3s ease-out;
+  }
+
+  a:hover {
+    background-size: 100% 2px, auto;
+  }
+}
+
+.subtitle {
+  background: #d4d4d4;
+  a {
+    background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(white, white);
+  }
+
+  a:hover {
+    background-size: 100% 2px, auto;
+  }
+}
+
 .items {
   display: flex;
   justify-content: center;

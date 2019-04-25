@@ -25,7 +25,7 @@
               <div class="item-bottom card-body">
                 <div class="item-title card-title">{{item.name}}</div>
                 <div class="item-description card-text">{{item.description}}</div>
-                <button aria-label="Узнать цену" [routerLink]="['/product-details', item.route]" class="buy-button" mat-button>Узнать цену
+                <button aria-label="Узнать цену" [routerLink]="['/product-details', item.route]" class="buy-button" mat-button (click)="scrollTop()">Узнать цену
                 </button>
               </div>
             </div>

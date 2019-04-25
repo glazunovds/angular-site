@@ -119,4 +119,8 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
     texts.forEach((item: HTMLElement) => maxTextHeight = item.offsetHeight > maxTextHeight ? item.offsetHeight : maxTextHeight);
     texts.forEach((item: HTMLElement) => item.style.height = maxTextHeight + 'px');
   }
+
+  scrollTop(): void {
+    $('html, body').stop().animate({scrollTop:0}, 500, 'swing');
+  }
 }
