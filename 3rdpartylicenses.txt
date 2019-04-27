@@ -561,10 +561,12 @@ MIT
 
 @angular/material/button
 
-@angular/material/expansion
+@angular/material/icon
 
 @angular/forms
 MIT
+
+@angular/material/expansion
 
 @angular/material/form-field
 
@@ -573,8 +575,6 @@ MIT
 @angular/material/dialog
 
 @angular/material/menu
-
-@angular/material/icon
 
 core-js
 MIT
