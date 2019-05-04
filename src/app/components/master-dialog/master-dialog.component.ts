@@ -1,20 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material';
-import {ContactDialogComponent} from '@appComponents/contact-dialog/contact-dialog.component';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {ContactDialogComponent} from '@appComponents/contact-dialog/contact-dialog.component';
 import {AppService} from '../../app.service';
 
 @Component({
-  selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+  selector: 'app-contact-dialog',
+  templateUrl: './master-dialog.component.html',
+  styleUrls: ['./master-dialog.component.css']
 })
-export class ContactsComponent implements OnInit {
-
+export class MasterDialogComponent implements OnInit {
   public form: FormGroup;
 
-  constructor(public dialog: MatDialog,
-              public appSevice: AppService) {
+  constructor(public dialogRef: MatDialogRef<MasterDialogComponent>,
+              public dialog: MatDialog,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              public appSevice: AppService) { }
+
+  public ok(): void {
+    this.dialogRef.close();
   }
 
   public ngOnInit(): void {
@@ -44,8 +48,11 @@ export class ContactsComponent implements OnInit {
               width: '500px',
               data: {name: this.form.get('name').value, number: this.form.get('number').value}
             });
+            dialogRef1.afterClosed().subscribe(result => {
+              this.dialogRef.close();
+            });
           }
-        );
+      );
     } else {
       Object.keys(this.form.controls).forEach(field => {
         const control = this.form.get(field);

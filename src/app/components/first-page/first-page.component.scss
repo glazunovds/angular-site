@@ -26,6 +26,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding-bottom: 0;
+  position: relative;
 }
 
 .item {
@@ -70,19 +71,40 @@ h2 {
   margin: 0;
 }
 
-.mat-expansion-panel-header:hover {
+.custom-arrow-back, .custom-arrow-next {
+  position: absolute;
+  color: #f5b412;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.controls {
+  position: absolute;
+  height: 100%;
+}
+
+.custom-arrow-back {
+  left: -5%;
+  top: 39%;
+}
+
+.custom-arrow-next {
+  right: -3%;
+  top: 39%;
+}
+//.mat-expansion-panel-header:hover {
   .subtitle {
-    background: #d4d4d4;
+    //background: #d4d4d4;
 
     a {
-      background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(#d4d4d4, #d4d4d4);
+      background-image: linear-gradient(#ffd54f, #ffd54f), linear-gradient(#f4f4f4, #f4f4f4);
     }
 
     a:hover {
       background-size: 100% 2px, auto;
     }
   }
-}
+//}
 
 .items {
   padding-top: 20px;

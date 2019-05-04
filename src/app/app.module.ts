@@ -27,6 +27,7 @@ import {RouteReuseStrategy} from '@angular/router';
 import {CustomReuseStrategy} from '@appComponents/custom-router-strategy';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ContactDialogComponent } from './components/contact-dialog/contact-dialog.component';
+import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
 
 
 @NgModule({
@@ -49,9 +50,11 @@ import { ContactDialogComponent } from './components/contact-dialog/contact-dial
     AboutComponent,
     ContactsComponent,
     ContactDialogComponent,
+    MasterDialogComponent
   ],
   entryComponents: [
-    ContactDialogComponent
+    ContactDialogComponent,
+    MasterDialogComponent
   ],
   providers: [AppService, MatDialog, {provide: LocationStrategy, useClass: HashLocationStrategy}, /*{
     provide: RouteReuseStrategy,

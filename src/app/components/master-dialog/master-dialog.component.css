@@ -1,0 +1,55 @@
+button {
+  margin-top: 10px;
+  background-color: #f5b412;
+  color: #3d3d3d;
+  border: 1px solid #3d3d3d;
+  font-weight: 400;
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+  padding-bottom: 14px;
+}
+
+.first-col, .last-col {
+  display: table-cell;
+  height: auto;
+}
+
+.name {
+  font-weight: 600;
+}
+.button-wrapper {
+  text-align: center;
+}
+
+.phone {
+  font-size: 22px;
+}
+
+.phones {
+  padding-top: 20px;
+}
+
+@media (max-width: 870px) {
+  .first-col, .last-col {
+    display: block;
+    max-width: 100%;
+  }
+  .contact-form {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  .name {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

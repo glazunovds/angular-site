@@ -64,6 +64,22 @@ a {
   margin-right: 22px;
 }
 
+
+.mat-form-field-infix {
+  width: 230px !important;
+}
+
+@media (max-width: 400px) {
+  .mat-form-field-infix {
+    width: 100% !important;
+  }
+}
+
+.call-button {
+  /*width: 300px !important;*/
+}
+
+
 .site-button {
   width: 270px;
   height: 35px;
@@ -100,6 +116,15 @@ a {
   height: 50px;
 }
 
+.call-button {
+  font-size: 20px;
+}
+
+.site-button-wrapper {
+  text-align: center;
+  padding-bottom: 62px;
+}
+
 @media (max-width: 460px) {
   .navbar-logo {
     display: none;
@@ -118,6 +143,9 @@ a {
   .parallax-text-wrapper {
     font-size: 20px;
   }
+  .controls {
+    display: none;
+  }
 }
 
 @media (max-width: 766px) {
@@ -135,12 +163,22 @@ a {
   }
 }
 
+@media (max-width: 1000px) {
+  .site-button {
+    width: 180px;
+  }
+}
+
 @media (max-width: 500px) {
   .page-title {
     font-size: 25px !important;
   }
   .diag {
     font-size: 25px;
+  }
+
+  .slick-dots {
+    width: 95%;
   }
 }
 

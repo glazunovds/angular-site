@@ -1,6 +1,9 @@
 import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Details, DETAILS_PAGE} from '@appComponents/site-data';
+import {ContactDialogComponent} from '@appComponents/contact-dialog/contact-dialog.component';
+import {MatDialog} from '@angular/material';
+import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
 
 @Component({
   selector: 'app-product-details',
@@ -13,7 +16,8 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
   private sub: any;
 
   constructor(private route: ActivatedRoute,
-              private cd: ChangeDetectorRef) {
+              private cd: ChangeDetectorRef,
+              public dialog: MatDialog) {
   }
 
   public ngOnInit(): void {
@@ -25,6 +29,13 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
 
   public ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+
+  public masterDialog(): void {
+    const dialogRef = this.dialog.open(MasterDialogComponent, {
+      width: '800px',
+      data: {}
+    });
   }
 
 }

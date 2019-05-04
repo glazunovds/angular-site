@@ -1,0 +1,32 @@
+<h1 mat-dialog-title></h1>
+<div mat-dialog-content>
+  <div class="first-col col-md-7 col-sm-12">
+    <div class="name">Бесплатно вызвать мастера на дом в Запорожье!</div>
+    <div>1. Позвоните или заполните форму</div>
+    <div>2. Обсудите с оператором дату и время</div>
+    <div>3. Дождитесь квалицированного мастера</div>
+    <div>4. Получите гарантию на ремонт</div>
+    <div>5. Пользуйтесь исправной техникой</div>
+    <div class="phones">
+      <div class="name">Телефоны для заявок:</div>
+      <div class="phone">+380 (50) 484 46 41</div>
+      <div class="phone">+380 (50) 484 46 41</div>
+    </div>
+  </div>
+  <div class="last-col col-md-5 col-sm-12">
+    <div  class="name">Бесплатно вызвать мастера на дом</div>
+    <div class="contact-form" [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Как вас зовут?</mat-label>
+        <input matInput placeholder="Александр" [formControlName]="'name'">
+        <mat-error *ngIf="hasError('name', 'required')">Введите имя</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ваш номер телефона:</mat-label>
+        <input matInput placeholder="077-777-77-77" [formControlName]="'number'">
+        <mat-error *ngIf="hasError('number', 'required')">Введите номер телефона</mat-error>
+      </mat-form-field>
+      <div class="button-wrapper"><button mat-button type="button" aria-label="Отправить" (click)="sendData()">Отправить</button></div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,8 @@
     "build": "ng build --prod",
     "start": "ng serve --port=8083",
     "deploy:github": "ng build --prod --base-href \"https://glazunovds.github.io/angular-site/\" && ngh",
-    "deploy:localhost": "ng build --prod --base-href \"/\""
+    "deploy:localhost": "ng build --prod --base-href \"/\"",
+    "deploy:hosting": "ng build --prod --base-href \"https://www.centerservice.com.ua/\""
   },
   "keywords": [],
   "author": "",

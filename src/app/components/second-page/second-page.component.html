@@ -4,6 +4,9 @@
       <div class="page-title col-md-8 offset-md-2 stretch" style="font-size: 38px;">{{data.title}}</div>
       <div class="divider col-md-8 offset-md-2"></div>
       <div class="page-description col-md-8 offset-md-2">{{data.description}}</div>
+      <div class="col-md-8 offset-md-2 site-button-wrapper">
+        <button class="site-button call-button" type="button" attr.aria-label="{{'Вызвать мастера на дом'}}" (click)="masterDialog()">Вызвать мастера</button>
+      </div>
       <div class="items-wrapper col-md-6 offset-md-3 col-sm-6 offset-sm-3">
         <div *ngFor="let repair of data.repairArray" class="item">
           <img alt="{{repair.image}}" src="{{repair.image}}">
@@ -11,7 +14,7 @@
             <div class="repair-title">{{repair.title}}</div>
             <div class="repair-description">{{repair.description}}</div>
             <div class="button-wrapper">
-              <button class="site-button" type="button" attr.aria-label="{{repair.cost}}" [routerLink]="repair.route">{{repair.cost}}</button>
+              <button class="site-button" type="button" attr.aria-label="{{repair.cost}}" [routerLink]="repair.route" (click)="scrollTop()">{{repair.cost}}</button>
             </div>
           </div>
         </div>

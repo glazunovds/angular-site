@@ -82,6 +82,14 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
 
   }
 
+  public nextSlide(i): void {
+    $('.carousel-'+i).slick('slickNext');
+  }
+
+  public prevSlide(i): void {
+    $('.carousel-'+i).slick('slickPrev');
+  }
+
   public ngAfterViewInit(): void {
     this.zone.runOutsideAngular(() => {
       $('.carousel').slick(this.slideConfig);

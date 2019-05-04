@@ -65,13 +65,13 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
         image: 'assets/logo.jpg',
         name: 'Ремонт кофемашин и кофеварок',
         description: 'Ремонт кофемашин и кофеварок в Запорожье',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Гарантийный ремонт утюгов',
         description: 'Гарантийный ремонт утюгов в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
@@ -83,19 +83,19 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
         image: 'assets/logo.jpg',
         name: 'Ремонт кофемашин и кофеварок',
         description: 'Ремонт кофемашин и кофеварок в Запорожье',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Гарантийный ремонт утюгов',
         description: 'Гарантийный ремонт утюгов в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт мясорубок в Запорожье ',
         description: 'Ремонт мясорубок в Запорожье и Запорожской области',
-        route: 'dryer'
+        route: 'meat-grinder-repair'
       },
     ]
   },
@@ -107,37 +107,37 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
         image: 'assets/logo.jpg',
         name: 'Ремонт кондиционеров на дому',
         description: 'Ремонт кондиционеров в Запорожье ',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт холодильников на дому',
         description: 'Ремонт холодильников в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт стиральных машин',
         description: 'Ремонт стиральных машин в Запорожье',
-        route: 'dryer'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт кондиционеров на дому',
         description: 'Ремонт кондиционеров в Запорожье ',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт холодильников на дому',
         description: 'Ремонт холодильников в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт стиральных машин',
         description: 'Ремонт стиральных машин в Запорожье',
-        route: 'dryer'
+        route: 'meat-grinder-repair'
       },
     ]
   },
@@ -149,37 +149,37 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
         image: 'assets/logo.jpg',
         name: 'Ремонт телевизоров',
         description: 'Ремонт телевизоров в Запорожье',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт компьютеров',
         description: 'Ремонт компьютеров в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт ноутбуков',
         description: 'Ремонт ноутбуков в Запорожье',
-        route: 'dryer'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт телевизоров',
         description: 'Ремонт телевизоров в Запорожье',
-        route: 'combine'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт компьютеров',
         description: 'Ремонт компьютеров в Запорожье',
-        route: 'sewing'
+        route: 'meat-grinder-repair'
       },
       {
         image: 'assets/logo.jpg',
         name: 'Ремонт ноутбуков',
         description: 'Ремонт ноутбуков в Запорожье',
-        route: 'dryer'
+        route: 'meat-grinder-repair'
       },
     ]
   },
@@ -224,77 +224,77 @@ export const REPAIR_PAGE: Array<Repair> = [
         description: 'Ремонт кухонных комбаинов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: '/product-details/food-processor-repair'
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт блендера',
         description: 'Ремонт блендера в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт миксера',
         description: ' Ремонт миксера в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт кофемашин и кофеварок ',
         description: 'Ремонт кофемашин и кофеварок в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт мультиварки',
         description: 'Ремонт мультиварки в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт хлебопечки',
         description: 'Ремонт хлебопечки в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт соковыжемалки',
         description: 'Ремонт соковыжималки в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт овощесушилок',
         description: 'Ремонт овощесушилок в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт пылесоса',
         description: 'Ремонт пылесоса в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт утюгов ',
         description: 'Ремонт утюгов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт фенов и электрических плоек',
         description: 'Ремонт фенов и электрических плоек в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       }
     ]
   },
@@ -308,35 +308,35 @@ export const REPAIR_PAGE: Array<Repair> = [
         description: 'Ремонт компьютеров в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт телевизоров',
         description: 'Ремонт телевизоров в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт ноутбуков',
         description: 'Ремонт ноутбуков в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт фотоаппаратов ',
         description: 'Ремонт фотоаппаратов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 300 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт телефонов',
         description: 'Ремонт телефонов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 300 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       }
     ]
   },
@@ -350,49 +350,49 @@ export const REPAIR_PAGE: Array<Repair> = [
         description: 'Недорогая установка, профессиональный ремонт и сервисное техобслуживание холодильников в Запорожье и Запорожской области. ',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт Бойлеров',
         description: 'Профессиональный ремонт, сервисное техобслуживание и гарантийная установка бойлеров в Запорожье и Запорожской области. ',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт бойлеров',
         description: 'Профессиональный ремонт, сервисное техобслуживание и гарантийная установка бойлеров в Запорожье и Запорожской области. ',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт газовых колонок и котлов',
         description: 'Гарантийный ремонт газовой колонки, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт проточных водонагревателей',
         description: 'Гарантийный ремонт газовой колонки, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт электрических конвекторов',
         description: 'Гарантийный ремонт электрических конвекторов, тепловентиляторов и обогревателей, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт электрических котлов отопления',
         description: 'Гарантийный ремонт электрических конвекторов, тепловентиляторов и обогревателей, сервисное обслуживание, монтаж и установка котлов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       }
     ]
   },
@@ -406,126 +406,133 @@ export const REPAIR_PAGE: Array<Repair> = [
         description: 'Ремонт холодильников в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт кондиционеров',
         description: 'Ремонт кондиционеров  в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт стиральных машин',
         description: 'Ремонт стиральных машин в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
+      },
+      {
+        title: 'Ремонт бойлеров',
+        description: 'Ремонт бойлеров в Запорожье и Запорожской области',
+        image: 'assets/logo.jpg',
+        cost: 'От 250 грн',
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт сушильных машин',
         description: 'Ремонт сушильных машин в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 300 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт посудомоечных машин',
         description: 'Ремонт посудомоечных машин в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт ледегенераторов',
         description: 'Ремонт ледегенераторов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт холодильных ларей',
         description: 'Ремонт холодильных ларей в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт холодильных витрин',
         description: 'Ремонт холодильных витрин в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт морозильных камер',
         description: 'Ремонт морозильных камер в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт осушителей воздуха',
         description: 'Ремонт осушителей воздуха в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт измельчителей',
         description: 'Ремонт измельчителей в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт варочных поверхностей (элетро) ',
         description: 'Ремонт варочных поверхностей (элетро)  в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт электроплит',
         description: 'Ремонт электроплит в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт духовых печей',
         description: 'Ремонт духовых печей в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт вытяжек',
         description: 'Ремонт вытяжек в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт гироскутеров',
         description: 'Ремонт гироскутеров в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт гиробордов',
         description: 'Ремонт гиробордов в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
       {
         title: 'Ремонт квадрокоптеров',
         description: 'Ремонт квадрокоптеров в Запорожье и Запорожской области',
         image: 'assets/logo.jpg',
         cost: 'От 250 грн',
-        route: ''
+        route: '/product-details/meat-grinder-repair'
       },
     ]
   },
