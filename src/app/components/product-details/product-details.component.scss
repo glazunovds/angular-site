@@ -22,6 +22,11 @@
   padding: 30px 15px;
 }
 
+.text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .problem, .faq-item {
   padding-top: 50px;
 }
@@ -63,6 +68,14 @@
 
 .review-comment, .review-name {
   padding-bottom: 20px;
+}
+
+.details-image {
+  text-align: center;
+  padding-top: 10px;
+  img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 950px) {

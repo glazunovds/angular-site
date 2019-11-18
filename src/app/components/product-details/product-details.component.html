@@ -3,6 +3,9 @@
     <div>
       <div class="page-title col-md-8 offset-md-2 stretch">{{data.title}}</div>
       <div class="divider col-md-8 offset-md-2"></div>
+      <div class="col-md-8 offset-md-2 details-image">
+        <img src="{{data.image}}" alt="{{data.image}}">
+      </div>
       <div class="page-description col-md-8 offset-md-2">{{data.description}}</div>
       <div class="col-md-8 offset-md-2 site-button-wrapper">
         <button class="site-button call-button" type="button" attr.aria-label="{{'Вызвать мастера на дом'}}" (click)="masterDialog()">Вызвать мастера</button>
@@ -16,24 +19,38 @@
           <button type="button" attr.aria-label="{{cost.value}}" class="site-button">{{cost.value}}</button>
         </div>
       </div>
-      <div class="separator">
+
+
+      <div class="separator" *ngIf="!!data.problemsTitle">
         <div class="col-md-8 offset-md-2 stretch title">{{data.problemsTitle}}</div>
       </div>
-      <div class="problems-wrapper col-md-8 offset-md-2">
-        <div *ngFor="let problem of data.problemsArray; let i = index" class="problem">
-          <div class="problem-title">{{i + 1}}. {{problem.title}}</div>
-          <div class="problem-description">{{problem.description}}</div>
-        </div>
+      <div class="problems-wrapper col-md-8 offset-md-2" *ngIf="!!data.problemsTitle">
+        <ul>
+          <li class="district" *ngFor="let d of data.problemsArray">{{d}}</li>
+        </ul>
       </div>
+
       <div class="separator">
-        <div class="col-md-8 offset-md-2 stretch title">{{data.faqTitle}}</div>
+        <div class="col-md-8 offset-md-2 stretch title">{{data.brandsTitle}}</div>
       </div>
-      <div class="faq-wrapper col-md-8 offset-md-2">
-        <div *ngFor="let faq of data.faqArray" class="faq-item">
-          <div class="faq-title">{{faq.title}}</div>
-          <div class="faq-description">{{faq.description}}</div>
+      <div class="brands-description text col-md-8 offset-md-2">
+        {{data.brandsDescription}}
+      </div>
+
+      <div class="separator">
+        <div class="col-md-8 offset-md-2 stretch title">{{data.districtsTitle}}</div>
+      </div>
+      <div class="text">
+        <div class="districts-description col-md-8 offset-md-2">
+          {{data.districtsDescription}}
+        </div>
+        <div class="districts col-md-8 offset-md-2">
+          <ul>
+            <li class="district" *ngFor="let d of data.districtsArray">{{d}}</li>
+          </ul>
         </div>
       </div>
+
       <div class="separator">
         <div class="col-md-8 offset-md-2 stretch title">{{data.reviewsTitle}}</div>
       </div>
