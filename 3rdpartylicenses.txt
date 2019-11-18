@@ -566,8 +566,6 @@ MIT
 @angular/forms
 MIT
 
-@angular/material/expansion
-
 @angular/material/form-field
 
 @angular/material/tooltip
