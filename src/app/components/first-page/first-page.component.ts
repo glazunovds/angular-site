@@ -23,7 +23,7 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
   slideConfig = {
     'slidesToShow': 3,
     'slidesToScroll': 1,
-    'infinite': true,
+    'infinite': false,
     'arrows': false,
     'autoplay': true,
     'autoplaySpeed': 10000,
@@ -35,7 +35,7 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
         settings: {
           'slidesToShow': 3,
           'slidesToScroll': 1,
-          'infinite': true,
+          'infinite': false,
           'arrows': false,
           'autoplay': true,
           'autoplaySpeed': 10000,
@@ -48,7 +48,7 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
         settings: {
           'slidesToShow': 2,
           'slidesToScroll': 1,
-          'infinite': true,
+         'infinite': false,
           'arrows': false,
           'autoplay': true,
           'autoplaySpeed': 10000,
@@ -61,7 +61,7 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
         settings: {
           'slidesToShow': 1,
           'slidesToScroll': 1,
-          'infinite': true,
+         'infinite': false,
           'arrows': false,
           'autoplay': true,
           'autoplaySpeed': 10000,
