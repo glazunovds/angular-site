@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {AppService} from '../../app.service';
+import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
 declare const $: any;
 
 @Component({
@@ -15,14 +16,14 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   public navItems = [
     {route: '/', name: 'Главная'},
     {route: 'about/', name: 'О сервисе'},
-    {route: '/repair/small-repair', name: 'Ремонт мелкой бытовой техники'},
-    {route: '/repair/electronic-repair', name: 'Ремонт электроники и ТВ'},
-    {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
+    {route: '/repair/remont-melkoj-bytovoj-tehniki', name: 'Ремонт мелкой бытовой техники'},
+    {route: '/repair/remont-elektroniki-tv', name: 'Ремонт электроники и ТВ'},
+    {route: '/repair/remont-bitovoy-tehniki', name: 'Ремонт крупной бытовой техники'},
   ];
   public subMenuItems = [
-    {route: '/repair/small-repair', name: 'Ремонт мелкой бытовой техники'},
-    {route: '/repair/electronic-repair', name: 'Ремонт электроники и ТВ'},
-    {route: '/repair/large-repair', name: 'Ремонт крупной бытовой техники'},
+    {route: '/repair/remont-melkoj-bytovoj-tehniki', name: 'Ремонт мелкой бытовой техники'},
+    {route: '/repair/remont-elektroniki-tv', name: 'Ремонт электроники и ТВ'},
+    {route: '/repair/remont-bitovoy-tehniki', name: 'Ремонт крупной бытовой техники'},
   ];
   private sub: any;
 

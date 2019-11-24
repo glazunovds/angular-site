@@ -57,7 +57,7 @@ export const ABOUT = [
 export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string; name: string; description: string, route: string })[] })[] = [
   {
     name: 'Ремонт мелкой бытовой техники в Запорожье',
-    route: '/repair/small-repair',
+    route: '/repair/remont-melkoj-bytovoj-tehniki',
     items: [
       {
         image: 'assets/images/meat_grinder.png',
@@ -117,7 +117,7 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
   },
   {
     name: 'Ремонт крупной бытовой техники в Запорожье',
-    route: '/repair/large-repair',
+    route: '/repair/remont-bitovoy-tehniki',
     items: [
       {
         image: 'assets/images/holodilnik.png',
@@ -165,13 +165,13 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
   },
   {
     name: 'Ремонт электроники и ТВ в Запорожье',
-    route: '/repair/electronic-repair',
+    route: '/repair/remont-elektroniki-tv',
     items: [
       {
-        image: 'assets/images/computer.png',
-        name: 'Ремонт телевизоров',
-        description: 'Ремонт телевизоров в Запорожье',
-        route: 'телевизоры'
+        image: 'assets/images/telefon.png',
+        name: 'Ремонт телефонов',
+        description: 'Ремонт телефонов в Запорожье',
+        route: 'телефоны'
       },
       {
         image: 'assets/images/computer.png',
@@ -186,10 +186,10 @@ export const MAIN_PAGE: ({ name: string; route: string; items: ({ image: string;
         route: 'ноутбуки'
       },
       {
-        image: 'assets/images/computer.png',
-        name: 'Ремонт телевизоров',
-        description: 'Ремонт телевизоров в Запорожье',
-        route: 'телевизоры'
+        image: 'assets/images/telefon.png',
+        name: 'Ремонт телефонов',
+        description: 'Ремонт телефонов в Запорожье',
+        route: 'телефоны'
       },
       {
         image: 'assets/images/computer.png',
@@ -235,13 +235,13 @@ export interface Repair {
 
 export const REPAIR_PAGE: Array<Repair> = [
   {
-    route: 'small-repair',
-    title: 'Ремонт мелкой бытовой техники в запорожье',
+    route: 'remont-melkoj-bytovoj-tehniki',
+    title: 'Ремонт мелкой бытовой техники в Запорожье',
     description: 'Мелкая бытовая техника играет важную роль в жизни и быту каждого человека. Уже невозможно представить себе, как можно обойтись без машинки для стрижки волос, фена, кофемолки, кофеварки, пылесоса, тостера, вентилятора, утюга или чайника. Вся эта техника, стала неотъемлемой частью нашей жизни. Но при регулярном использовании, любая техника, не зависимо от производителя, может выйти из строя. В таком случае не стоит затягивать и обратиться в сервисный центр по ремонту мелкой бытовой техники. Не стоит приниматься за ремонт самостоятельно, т.к. это может привести к травмам и негативным последствиям. Наш сервисный центр выполняет профессиональный ремонт мелкой бытовой техники. ',
     repairArray: [
       {
-        title: 'Ремонт мясорубки',
-        description: 'Ремонт мясорубки в Запорожье и Запорожской области',
+        title: 'Ремонт электромясорубки',
+        description: 'Ремонт электромясорубки в Запорожье и Запорожской области',
         image: 'assets/images/meat_grinder.png',
         cost: 'От 250 грн',
         route: '/product-details/электромясорубки'
@@ -282,17 +282,17 @@ export const REPAIR_PAGE: Array<Repair> = [
         route: '/product-details/мультиварки'
       },
       {
-        title: 'Ремонт соковыжемалки',
-        description: 'Ремонт соковыжималки в Запорожье и Запорожской области',
-        image: 'assets/images/sokovizhimalka.png',
+        title: 'Ремонт кофемолки',
+        description: 'Ремонт кофемолки в Запорожье и Запорожской области',
+        image: 'assets/images/coffee.png',
         cost: 'От 250 грн',
-        route: '/product-details/соковыжималки'
+        route: '/product-details/кофемолки'
       },
     ]
   },
   {
-    route: 'electronic-repair',
-    title: 'Ремонт электроники и тв в запорожье',
+    route: 'remont-elektroniki-tv',
+    title: 'Ремонт электроники и тв в Запорожье',
     description: 'Ремонт электроники на дому в сервисном центре "Центр-сервис" – гарантийный ремонт фотоаппаратов, компьютеров, мониторов, телевизоров и другой электро и радио техники в Запорожье и Запорожской области',
     repairArray: [
       {
@@ -301,13 +301,6 @@ export const REPAIR_PAGE: Array<Repair> = [
         image: 'assets/images/computer.png',
         cost: 'От 250 грн',
         route: '/product-details/компьютеры'
-      },
-      {
-        title: 'Ремонт телевизоров',
-        description: 'Ремонт телевизоров в Запорожье и Запорожской области',
-        image: 'assets/images/computer.png',
-        cost: 'От 250 грн',
-        route: '/product-details/телевизоры'
       },
       {
         title: 'Ремонт ноутбуков',
@@ -327,7 +320,7 @@ export const REPAIR_PAGE: Array<Repair> = [
   },
   {
     route: 'climatic-repair',
-    title: 'Ремонт отопительного и климатического оборудования в запорожье',
+    title: 'Ремонт отопительного и климатического оборудования в Запорожье',
     description: 'Опыт работы сервис инженеров, в сфере ремонта и сервисного обслуживание климатического и отопительного оборудования составляет более 8 лет. Сервисный центр "Центр Сервис" предлагает качественный ремонт и сервисное обслуживание газового отопительного и водогрейного оборудования (котлы и колонки) любого производителя.',
     repairArray: [
       {
@@ -382,7 +375,7 @@ export const REPAIR_PAGE: Array<Repair> = [
     ]
   },
   {
-    route: 'large-repair',
+    route: 'remont-bitovoy-tehniki',
     title: 'Ремонт крупной бытовой техники в Запорожье',
     description: 'Крупная бытовая техника (габаритная, или крупногабаритная бытовая электротехника) играет важную роль в жизни и быту каждого человека. Уже невозможно представить себе, как можно обойтись без машинки для стрижки волос, фена, кофемолки, кофеварки, пылесоса, тостера, вентилятора, утюга или чайника. Вся эта техника, стала неотъемлемой частью нашей жизни. Но при регулярном использовании, любая техника, не зависимо от производителя, может выйти из строя. В таком случае не стоит затягивать и обратиться в сервисный центр по ремонту мелкой бытовой техники. Не стоит приниматься за ремонт самостоятельно, т.к. это может привести к травмам и негативным последствиям. Наш сервисный центр выполняет профессиональный ремонт крупной бытовой техники. ',
     repairArray: [

@@ -14,20 +14,20 @@
       <a class="{{route === '/about' ? 'nav-link selected-route' : 'nav-link'}}" *ngIf="menuItemsAvailable > 1" routerLink="about/">О сервисе</a>
     </div>
     <div class="nav-link-wrapper menu-item-hide">
-      <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-         routerLink="repair/small-repair" *ngIf="menuItemsAvailable > 2">Ремонт мелкой бытовой техники</a>
+      <a class="{{route === '/repair/remont-melkoj-bytovoj-tehniki' ? 'nav-link selected-route' : 'nav-link'}}"
+         routerLink="repair/remont-melkoj-bytovoj-tehniki" *ngIf="menuItemsAvailable > 2">Ремонт мелкой бытовой техники</a>
     </div>
     <div class="nav-link-wrapper menu-item-hide"><a
-      class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="repair/electronic-repair" *ngIf="menuItemsAvailable > 3">Ремонт электроники и ТВ</a>
+      class="{{route === '/repair/remont-elektroniki-tv' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/remont-elektroniki-tv" *ngIf="menuItemsAvailable > 3">Ремонт электроники и ТВ</a>
     </div>
     <div class="nav-link-wrapper menu-item-hide"><a
       class="{{route === '/repair/climatic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
       routerLink="repair/climatic-repair" *ngIf="menuItemsAvailable > 4">Ремонт
       отопительного и климатического оборудования</a></div>
     <div class="nav-link-wrapper menu-item-hide"><a
-      class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="repair/large-repair" *ngIf="menuItemsAvailable > 5">Ремонт крупной бытовой техники</a>
+      class="{{route === '/repair/remont-bitovoy-tehniki' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/remont-bitovoy-tehniki" *ngIf="menuItemsAvailable > 5">Ремонт крупной бытовой техники</a>
     </div>-->
     <mat-menu #appMenu="matMenu" class="menu-item-hide">
       <button type="button" (click)="scrollTop()" *ngFor="let item of subMenuItems" mat-menu-item routerLink="{{item.route}}" attr.aria-label="{{item.name}}">{{item.name}}</button>
@@ -61,16 +61,16 @@
       </button>
     </div>
     <div class="nav-link-wrapper">
-      <a class="{{route === '/repair/small-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-         routerLink="repair/small-repair" (click)="disableNavBar()">Ремонт мелкой бытовой техники</a>
+      <a class="{{route === '/repair/remont-melkoj-bytovoj-tehniki' ? 'nav-link selected-route' : 'nav-link'}}"
+         routerLink="repair/remont-melkoj-bytovoj-tehniki" (click)="disableNavBar()">Ремонт мелкой бытовой техники</a>
     </div>
     <div class="nav-link-wrapper"><a
-      class="{{route === '/repair/electronic-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="repair/electronic-repair" (click)="disableNavBar()">Ремонт электроники и ТВ</a>
+      class="{{route === '/repair/remont-elektroniki-tv' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/remont-elektroniki-tv" (click)="disableNavBar()">Ремонт электроники и ТВ</a>
     </div>
     <div class="nav-link-wrapper"><a
-      class="{{route === '/repair/large-repair' ? 'nav-link selected-route' : 'nav-link'}}"
-      routerLink="repair/large-repair" (click)="disableNavBar()">Ремонт крупной бытовой техники</a></div>
+      class="{{route === '/repair/remont-bitovoy-tehniki' ? 'nav-link selected-route' : 'nav-link'}}"
+      routerLink="repair/remont-bitovoy-tehniki" (click)="disableNavBar()">Ремонт крупной бытовой техники</a></div>
     <div class="nav-link-wrapper "><a
       class="{{route === 'about/' ? 'nav-link selected-route' : 'nav-link'}}"
       routerLink="about/"  (click)="disableNavBar()">О сервисе</a>

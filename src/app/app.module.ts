@@ -28,6 +28,7 @@ import {CustomReuseStrategy} from '@appComponents/custom-router-strategy';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ContactDialogComponent } from './components/contact-dialog/contact-dialog.component';
 import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.
     AboutComponent,
     ContactsComponent,
     ContactDialogComponent,
-    MasterDialogComponent
+    MasterDialogComponent,
+    FooterComponent
   ],
   entryComponents: [
     ContactDialogComponent,
