@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
+declare const $: any;
 
 @Component({
   selector: 'app-footer',
@@ -20,5 +21,9 @@ export class FooterComponent implements OnInit {
       width: '800px',
       data: {}
     });
+  }
+
+  scrollTop(): void {
+    $('html, body').stop().animate({scrollTop:0}, 500, 'swing');
   }
 }
