@@ -4,6 +4,7 @@ import {Details, DETAILS_PAGE} from '@appComponents/site-data';
 import {ContactDialogComponent} from '@appComponents/contact-dialog/contact-dialog.component';
 import {MatDialog} from '@angular/material';
 import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product-details',
@@ -17,7 +18,9 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute,
               private cd: ChangeDetectorRef,
+              private meta: Meta,
               public dialog: MatDialog) {
+    this.meta.updateTag({name: 'Description', content: 'test', id: 'meta-description'});
   }
 
   public ngOnInit(): void {
