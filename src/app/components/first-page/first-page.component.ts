@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {MAIN_PAGE} from '@appComponents/site-data';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Meta} from '@angular/platform-browser';
 
 const EXPANSION_PANEL_ANIMATION_TIMING = '225ms cubic-bezier(0.4,0.0,0.2,1)';
 declare const $: any;
@@ -74,12 +75,13 @@ export class FirstPageComponent implements OnInit, AfterViewInit, OnDestroy {
   public step = 0;
   public listener: any;
 
-  constructor(public zone: NgZone) {
+  constructor(private meta: Meta, public zone: NgZone) {
 
   }
 
   public ngOnInit(): void {
-
+    this.meta.updateTag({name: 'Title', content: 'Сервисный центр «Центр Сервис»', id: 'meta-title'});
+    this.meta.updateTag({name: 'Description', content: 'Ремонт крупной, мелкой бытовой техники и электроники в Запорожье', id: 'meta-description'});
   }
 
   public nextSlide(i): void {

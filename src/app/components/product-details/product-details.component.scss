@@ -9,6 +9,9 @@
   text-align: center;
   padding-top: 30px;
   padding-bottom: 10px;
+  h1 {
+    font-size: 50px;
+  }
 }
 
 .divider {
@@ -79,12 +82,25 @@
   }
 }
 
+.title {
+  font-size: 38px;
+  h2 {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 950px) {
   .page-title {
     font-size: 32px;
+    h1 {
+      font-size: 32px;
+    }
   }
   .title {
     font-size: 26px;
+    h2 {
+      font-size: 26px;
+    }
   }
 }
 

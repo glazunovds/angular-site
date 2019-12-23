@@ -1,7 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div>
-      <div class="page-title col-md-8 offset-md-2 stretch">{{data.title}}</div>
+      <div class="page-title col-md-8 offset-md-2 stretch">
+        <h1>{{data.title}}</h1>
+      </div>
       <div class="divider col-md-8 offset-md-2"></div>
       <div class="col-md-8 offset-md-2 details-image">
         <img src="{{data.image}}" alt="{{data.image}}">
@@ -11,7 +13,9 @@
         <button class="site-button call-button" type="button" attr.aria-label="{{'Вызвать мастера на дом'}}" (click)="masterDialog()">Вызвать мастера</button>
       </div>
       <div class="separator">
-        <div class="col-md-8 offset-md-2 stretch title">{{data.costTitle}}</div>
+        <div class="col-md-8 offset-md-2 stretch title">
+          <h2>{{data.costTitle}}</h2>
+        </div>
       </div>
       <div class="cost-wrapper col-md-8 offset-md-2">
         <div *ngFor="let cost of data.costArray" class="cost-item">

@@ -20,13 +20,15 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
               private cd: ChangeDetectorRef,
               private meta: Meta,
               public dialog: MatDialog) {
-    this.meta.updateTag({name: 'Description', content: 'test', id: 'meta-description'});
+
   }
 
   public ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       this.data = DETAILS_PAGE.filter(item => item.route === this.id)[0];
+      this.meta.updateTag({name: 'Title', content: this.data.seoTitle || '', id: 'meta-title'});
+      this.meta.updateTag({name: 'Description', content: this.data.seoDescription || '', id: 'meta-description'});
     });
   }
 

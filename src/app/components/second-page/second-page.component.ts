@@ -3,6 +3,7 @@ import {Repair, REPAIR_PAGE} from '@appComponents/site-data';
 import {ActivatedRoute} from '@angular/router';
 import {MasterDialogComponent} from '@appComponents/master-dialog/master-dialog.component';
 import {MatDialog} from '@angular/material';
+import {Meta} from '@angular/platform-browser';
 declare const $: any;
 
 @Component({
@@ -17,15 +18,17 @@ export class SecondPageComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute,
               private cd: ChangeDetectorRef,
+              private meta: Meta,
               public dialog: MatDialog) {
-    this.sub = this.route.params.subscribe(params => {
-      this.id = params['id'];
-      this.data = REPAIR_PAGE.filter(item => item.route === this.id)[0];
-    });
   }
 
   public ngOnInit(): void {
-
+    this.sub = this.route.params.subscribe(params => {
+      this.id = params['id'];
+      this.data = REPAIR_PAGE.filter(item => item.route === this.id)[0];
+      this.meta.updateTag({name: 'Title', content: this.data.seoTitle || '', id: 'meta-title'});
+      this.meta.updateTag({name: 'Description', content: this.data.seoDescription || '', id: 'meta-description'});
+    });
   }
 
   public ngOnDestroy(): void {
